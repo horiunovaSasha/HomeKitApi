@@ -19,6 +19,7 @@ namespace HomeKitApi
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+                .UseStartup<Startup>()
+                .UseUrls("https://127.0.0.1:5002");
     }
 }

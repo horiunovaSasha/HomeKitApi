@@ -115,5 +115,11 @@ namespace HomeKitApi.Controllers
                 expires: DateTime.UtcNow.Add(TimeSpan.FromMinutes(AuthOptions.LIFETIME)),
                 signingCredentials: new SigningCredentials(AuthOptions.GetSymmetricSecurityKey(), SecurityAlgorithms.HmacSha256));
         }
+        [HttpGet]
+        [Route("test")]
+        public List<string> Test()
+        {
+            return new List<string>() { "Plak - plak" };
+        }
     }
 }
